@@ -1,13 +1,15 @@
 :root {
-  /* Grayscale Color Palette - Apple Inspired */
-  --cg-black: #000000;
-  --cg-dark-gray: #1d1d1f;
-  --cg-gray: #424245;
-  --cg-light-gray: #6e6e73;
-  --cg-lighter-gray: #86868b;
-  --cg-lightest-gray: #f5f5f7;
-  --cg-white: #ffffff;
-  --cg-off-white: #fafafa;
+  /* Congress Blue Color Palette */
+  --congress-blue: #004483;
+  --congress-blue-light: #0056a3;
+  --congress-blue-dark: #003366;
+  --congress-blue-lighter: #e6f0f9;
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --light-gray: #f5f5f5;
+  --gray: #666666;
+  --dark-gray: #333333;
+  --black: #000000;
   
   /* Typography - Apple Style */
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -16,8 +18,8 @@
   letter-spacing: -0.022em;
   
   color-scheme: light;
-  color: var(--cg-dark-gray);
-  background-color: var(--cg-white);
+  color: var(--dark-gray);
+  background-color: var(--white);
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +40,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--cg-off-white);
+  background: var(--off-white);
   font-size: 17px;
 }
 
@@ -51,9 +53,9 @@ body {
 }
 
 .container {
-  background: var(--cg-white);
+  background: var(--white);
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 68, 131, 0.08);
   padding: 3rem;
   margin: 0 auto;
   max-width: 1000px;
@@ -75,12 +77,12 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 0 4px 12px rgba(0, 68, 131, 0.15);
+  filter: drop-shadow(0 2px 4px rgba(0, 68, 131, 0.1));
 }
 
 .app-title {
-  color: var(--cg-black);
+  color: var(--congress-blue);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -90,7 +92,7 @@ body {
 }
 
 .app-subtitle {
-  color: var(--cg-light-gray);
+  color: var(--gray);
   font-size: 1.25rem;
   margin-bottom: 3rem;
   font-weight: 400;
@@ -114,7 +116,7 @@ body {
 .section-label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--cg-black);
+  color: var(--congress-blue);
   letter-spacing: -0.022em;
   margin-bottom: 0.5rem;
 }
@@ -123,31 +125,31 @@ body {
   width: 100%;
   min-height: 220px;
   padding: 1.25rem;
-  border: 1px solid var(--cg-lightest-gray);
+  border: 1px solid var(--light-gray);
   border-radius: 12px;
   font-family: inherit;
   font-size: 0.95rem;
   resize: vertical;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--cg-off-white);
-  color: var(--cg-dark-gray);
+  background: var(--off-white);
+  color: var(--dark-gray);
   line-height: 1.5;
 }
 
 .textarea:focus {
   outline: none;
-  border-color: var(--cg-gray);
-  box-shadow: 0 0 0 4px rgba(110, 110, 115, 0.1);
-  background: var(--cg-white);
+  border-color: var(--congress-blue);
+  box-shadow: 0 0 0 4px rgba(0, 68, 131, 0.1);
+  background: var(--white);
 }
 
 .textarea::placeholder {
-  color: var(--cg-lighter-gray);
+  color: var(--gray);
 }
 
-.generate-button {
-  background: var(--cg-black);
-  color: var(--cg-white);
+.generate-button, .nav-button {
+  background: var(--congress-blue);
+  color: var(--white);
   border: none;
   padding: 1rem 2rem;
   border-radius: 12px;
@@ -155,24 +157,26 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 68, 131, 0.15);
   letter-spacing: -0.022em;
   position: relative;
   overflow: hidden;
+  margin: 0.5rem;
+  min-width: 200px;
 }
 
-.generate-button:hover {
+.generate-button:hover, .nav-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  background: var(--cg-dark-gray);
+  box-shadow: 0 8px 24px rgba(0, 68, 131, 0.2);
+  background: var(--congress-blue-light);
 }
 
-.generate-button:active {
+.generate-button:active, .nav-button:active {
   transform: translateY(0);
 }
 
-.generate-button:disabled {
-  background: var(--cg-lighter-gray);
+.generate-button:disabled, .nav-button:disabled {
+  background: var(--gray);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -182,13 +186,13 @@ body {
   width: 100%;
   min-height: 220px;
   padding: 1.25rem;
-  border: 1px solid var(--cg-lightest-gray);
+  border: 1px solid var(--light-gray);
   border-radius: 12px;
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   font-size: 0.85rem;
   resize: vertical;
-  background: var(--cg-lightest-gray);
-  color: var(--cg-dark-gray);
+  background: var(--light-gray);
+  color: var(--dark-gray);
   line-height: 1.6;
 }
 
@@ -198,7 +202,7 @@ body {
   height: 18px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top-color: var(--cg-white);
+  border-top-color: var(--white);
   animation: spin 1s linear infinite;
   margin-right: 0.5rem;
 }
@@ -227,6 +231,209 @@ body {
   border: 1px solid rgba(52, 199, 89, 0.2);
 }
 
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.back-button {
+  background: transparent;
+  color: var(--congress-blue);
+  border: 2px solid var(--congress-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+.back-button:hover {
+  background: var(--congress-blue);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Test Case Components */
+.test-cases-container {
+  width: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.test-cases-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--light-gray);
+  background: var(--congress-blue-lighter);
+  border-radius: 12px 12px 0 0;
+}
+
+.test-cases-header h3 {
+  color: var(--congress-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.test-cases-list {
+  padding: 1rem;
+}
+
+.no-test-cases {
+  padding: 2rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.test-case-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: var(--white);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.test-case-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 68, 131, 0.1);
+  border-color: var(--congress-blue);
+}
+
+.test-case-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.test-case-header:hover {
+  background: var(--congress-blue-lighter);
+}
+
+.test-case-info {
+  flex: 1;
+}
+
+.test-case-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--congress-blue);
+  margin: 0 0 0.5rem 0;
+}
+
+.test-case-description {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+
+
+.expand-arrow {
+  color: var(--congress-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.expand-arrow:hover {
+  background: rgba(0, 68, 131, 0.1);
+}
+
+.test-case-details {
+  border-top: 1px solid var(--light-gray);
+  background: var(--off-white);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.test-steps-header {
+  padding: 1rem 1.5rem 0.5rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.test-steps-header h4 {
+  color: var(--congress-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.test-steps-list {
+  padding: 1rem 1.5rem;
+}
+
+.test-step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+}
+
+.test-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--congress-blue);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-action, .step-expected {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.step-action strong, .step-expected strong {
+  color: var(--congress-blue);
+  font-weight: 600;
+}
+
+.step-expected {
+  color: var(--gray);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .content-grid {
@@ -246,6 +453,35 @@ body {
   .logo-section {
     flex-direction: column;
     gap: 0.75rem;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+  }
+  
+  .nav-button {
+    min-width: 180px;
+  }
+  
+  .test-case-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .test-case-name {
+    font-size: 1rem;
+  }
+  
+  .test-steps-list {
+    padding: 0.75rem 1rem;
+  }
+  
+  .test-step {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .step-number {
+    align-self: flex-start;
   }
 }
 
