@@ -1,0 +1,27 @@
+{
+  "name": "webapp-template-qa-ai",
+  "version": "1.0.0",
+  "description": "A TypeScript webapp with Python FastAPI backend for test case generation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.0"
+  },
+  "keywords": ["typescript", "react", "fastapi", "python", "webapp"],
+  "author": "",
+  "license": "MIT"
+} 
